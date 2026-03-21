@@ -1,4 +1,4 @@
-{% set version = "1.25.0" %}
+{% set version = "1.26.0" %}
 
 package:
   name: openmeteo-sdk
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/openmeteo-sdk/openmeteo_sdk-{{ version }}.tar.gz
-  sha256: a2225e5fb8e92b5493f60d926ff57cb8bc6cbeacad4b94dc436f537d468b5414
+  sha256: 209dff3fa3a3a1b7363b223db5770ac683fa76540518b8d5bba77d551a5227c1
 
 build:
   noarch: python
