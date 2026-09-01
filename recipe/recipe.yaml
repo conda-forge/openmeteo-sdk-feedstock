@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  version: "1.28.0"
+
+package:
+  name: openmeteo-sdk
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/o/openmeteo-sdk/openmeteo_sdk-${{ version }}.tar.gz
+  sha256: e77011b34f8696eb8cd6756d22b6868f9b3420671b93285171f2ab0ea3be1ba4
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - python-flatbuffers ==25.9.23
+
+tests:
+  - python:
+      imports:
+        - openmeteo_sdk
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Open-Meteo Python SDK
+  license: MIT
+  license_file: LICENSE
+  homepage: https://pypi.org/project/openmeteo-sdk/
+  repository: https://github.com/open-meteo/sdk
+  documentation: https://github.com/open-meteo/sdk/tree/main
+
+extra:
+  recipe-maintainers:
+    - akrherz
