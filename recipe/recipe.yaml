@@ -30,7 +30,9 @@ tests:
       imports:
         - openmeteo_sdk
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: Open-Meteo Python SDK
