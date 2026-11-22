@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.30.0"
+  version: "1.31.0"
 
 package:
   name: openmeteo-sdk
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/openmeteo-sdk/openmeteo_sdk-${{ version }}.tar.gz
-  sha256: 9b643ce593a557eddc880f8526da9c3700ef96f4388e6f43b5e2cadb6d92cff4
+  sha256: a1e9f7392aff96b147c57ce3390618bbd9df1edaa47437ff814cd054da9771c5
 
 build:
   number: 0
